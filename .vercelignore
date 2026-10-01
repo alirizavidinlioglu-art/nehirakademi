@@ -8,7 +8,6 @@ node_modules
 coverage
 playwright-report
 test-results
-tests
 assets/mascot-source
 *.pem
 *.key
