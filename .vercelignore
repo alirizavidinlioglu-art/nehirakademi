@@ -1,0 +1,14 @@
+.git
+.env*
+!.env.example
+.local
+.vercel
+node_modules
+.next
+coverage
+playwright-report
+test-results
+tests
+assets/mascot-source
+*.pem
+*.key

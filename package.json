@@ -1,0 +1,53 @@
+{
+  "name": "nehir-akademi",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "start": "next start --hostname 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "db:seed": "node --env-file-if-exists=.env.local --import tsx database/seed.ts",
+    "db:migrate": "node --env-file-if-exists=.env.local --import tsx database/migrate.ts",
+    "user:create": "node --env-file-if-exists=.env.local --import tsx scripts/create-user.ts",
+    "test:e2e": "playwright test",
+    "dev:accounts": "node --env-file-if-exists=.env.local --import tsx scripts/dev-accounts.ts",
+    "format": "prettier --write app components config database hooks lib scripts services tests types *.ts *.mjs"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.3.14",
+    "@fontsource/fredoka": "^5.2.7",
+    "@fontsource/nunito": "^5.2.7",
+    "bcryptjs": "^3.0.2",
+    "framer-motion": "^12.23.0",
+    "katex": "^0.16.22",
+    "lucide-react": "^0.468.0",
+    "next": "^15.5.12",
+    "postgres": "^3.4.7",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "undici": "7.24.4",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/katex": "^0.16.7",
+    "@types/node": "^22.18.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "eslint": "^9.35.0",
+    "eslint-config-next": "^15.5.12",
+    "prettier": "3.8.3",
+    "tailwindcss": "^4.1.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.0"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.9.0 <25"
+  }
+}
